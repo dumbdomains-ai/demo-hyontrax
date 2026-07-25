@@ -1,0 +1,23 @@
+# Build output
+dist/
+build/
+
+# Environment variables (keep secrets safe)
+.env
+.env.local
+.env.*.local
+
+# Editor/OS files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cache
+.cache/
+.parcel-cache/
+
+node_modules/
