@@ -32,8 +32,8 @@ const ShortSlide = ({ item, saved, justShared, onSave, onShare }) => {
 
   return (
     <div
-      className="relative flex items-center justify-center px-6 py-4"
-      style={{ height: 'calc(100vh - 68px)', scrollSnapAlign: 'start', flexShrink: 0 }}
+      className="relative flex items-start justify-center px-6 py-4"
+      style={{ height: 'calc(100vh - 68px)', scrollSnapAlign: 'start', flexShrink: 0, overflow: 'hidden' }}
     >
       <div className="w-full max-w-[640px] bg-white rounded-[24px] shadow-[0_8px_40px_rgba(21,101,192,0.12)] border-[1.5px] border-blue-100/60 overflow-hidden">
         <div className="h-2 w-full" style={{ background: `linear-gradient(90deg, ${cat.accent}, ${cat.accent}88)` }} />
