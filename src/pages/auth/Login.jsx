@@ -7,6 +7,7 @@ const features = [
   { icon: '📅', text: 'Discover & register for health events' },
   { icon: '🧠', text: 'Expert-curated health articles' },
   { icon: '📰', text: 'Bite-sized daily health shorts' },
+  { icon: '💬', text: 'Real patient testimonies & stories' },
   { icon: '👤', text: 'One account, your whole health journey' },
 ];
 
