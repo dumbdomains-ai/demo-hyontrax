@@ -38,9 +38,9 @@ const MyEvents = () => {
           <button onClick={() => navigate('/app/events/publish')} className="px-6 py-3 bg-gradient-primary text-white border-none rounded-xl text-sm font-bold cursor-pointer">Publish Event</button>
         </div>
       ) : (
-        <div className="grid grid-cols-[380px_1fr] gap-5 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-5 items-start">
           {/* List */}
-          <div className="bg-white rounded-[20px] shadow-blue-md border-[1.5px] border-blue-100/50 overflow-hidden max-h-[560px] overflow-y-auto">
+          <div className="bg-white rounded-[20px] shadow-blue-md border-[1.5px] border-blue-100/50 overflow-hidden overflow-y-auto">
             {myEvents.map((e) => {
               const sb = statusBadge[e.status] || statusBadge.pending;
               const active = e.id === selectedId;

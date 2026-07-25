@@ -150,7 +150,7 @@ const PublishEvent = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-[1fr_300px] gap-6 items-start">
+      <div className="grid grid-cols-1 xl:grid-cols-[1fr_280px] gap-6 items-start">
         <form onSubmit={handlePreview}>
           <div className="bg-white rounded-[20px] px-8 py-7 shadow-blue-md border-[1.5px] border-blue-100/50 mb-5">
             <h3 className="text-lg font-extrabold text-slate-800 mb-1.5">{editing ? 'Edit Event' : 'Publish Event'}</h3>

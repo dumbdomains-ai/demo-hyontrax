@@ -105,7 +105,7 @@ const EventDetails = () => {
         ← Back to Events
       </button>
 
-      <div className="grid grid-cols-[1fr_340px] gap-6 items-start">
+      <div className="grid grid-cols-1 xl:grid-cols-[1fr_320px] gap-6 items-start">
         {/* Main Content */}
         <div className="flex flex-col gap-5">
           <div className="bg-white rounded-[20px] shadow-blue-md border-[1.5px] border-blue-100/50 overflow-hidden">
@@ -113,7 +113,7 @@ const EventDetails = () => {
               <img
                 src={bannerUrl}
                 alt={event.title}
-                className="w-full h-[200px] object-cover block"
+                className="w-full h-[140px] sm:h-[200px] object-cover block"
               />
               <div className="absolute top-4 left-4 flex gap-2">
                 <span className="bg-white/95 rounded-full px-[14px] py-[5px] text-xs font-bold text-blue-800">{event.category}</span>

@@ -35,9 +35,12 @@ const ShortSlide = ({ item, saved, justShared, onSave, onShare }) => {
       className="relative flex items-start justify-center px-6 py-4"
       style={{ height: 'calc(100vh - 68px)', scrollSnapAlign: 'start', flexShrink: 0, overflow: 'hidden' }}
     >
-      <div className="w-full max-w-[640px] bg-white rounded-[24px] shadow-[0_8px_40px_rgba(21,101,192,0.12)] border-[1.5px] border-blue-100/60 overflow-hidden">
-        <div className="h-2 w-full" style={{ background: `linear-gradient(90deg, ${cat.accent}, ${cat.accent}88)` }} />
-        <div className="px-8 py-7">
+      <div
+        className="w-full max-w-[640px] bg-white rounded-[24px] shadow-[0_8px_40px_rgba(21,101,192,0.12)] border-[1.5px] border-blue-100/60 overflow-hidden flex flex-col"
+        style={{ maxHeight: 'calc(100vh - 100px)' }}
+      >
+        <div className="h-2 w-full shrink-0" style={{ background: `linear-gradient(90deg, ${cat.accent}, ${cat.accent}88)` }} />
+        <div className="px-8 pt-7 pb-0 overflow-y-auto flex-1">
           <div className="flex items-center justify-between mb-5">
             <span className="text-[12px] font-bold px-3 py-[5px] rounded-full" style={{ background: cat.bg, color: cat.color }}>
               {item.category}
@@ -60,25 +63,25 @@ const ShortSlide = ({ item, saved, justShared, onSave, onShare }) => {
             {bodyParagraphs.map((p, i) => <p key={i}>{p}</p>)}
           </div>
 
-          <div className="text-[11px] text-slate-400 font-medium mb-6">Source: {item.source}</div>
+          <div className="text-[11px] text-slate-400 font-medium mb-4">Source: {item.source}</div>
+        </div>
 
-          <div className="flex gap-3 pt-5 border-t border-slate-100">
-            <button
-              onClick={onSave}
-              className={`flex-1 py-3 rounded-xl text-[13px] font-semibold cursor-pointer transition-all flex items-center justify-center gap-2 border-[1.5px]
-                ${saved ? 'bg-blue-50 text-blue-800 border-blue-200' : 'bg-white text-slate-600 border-slate-200 hover:border-blue-200 hover:text-blue-800'}`}
-            >
-              <BookmarkIcon filled={saved} />
-              {saved ? 'Saved' : 'Save'}
-            </button>
-            <button
-              onClick={onShare}
-              className={`flex-1 py-3 rounded-xl text-[13px] font-semibold cursor-pointer transition-all flex items-center justify-center gap-2 border-[1.5px]
-                ${justShared ? 'bg-emerald-50 text-emerald-600 border-emerald-200' : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'}`}
-            >
-              {justShared ? <>✓ Copied</> : <><ShareIcon /> Share</>}
-            </button>
-          </div>
+        <div className="px-8 py-5 border-t border-slate-100 shrink-0 flex gap-3">
+          <button
+            onClick={onSave}
+            className={`flex-1 py-3 rounded-xl text-[13px] font-semibold cursor-pointer transition-all flex items-center justify-center gap-2 border-[1.5px]
+              ${saved ? 'bg-blue-50 text-blue-800 border-blue-200' : 'bg-white text-slate-600 border-slate-200 hover:border-blue-200 hover:text-blue-800'}`}
+          >
+            <BookmarkIcon filled={saved} />
+            {saved ? 'Saved' : 'Save'}
+          </button>
+          <button
+            onClick={onShare}
+            className={`flex-1 py-3 rounded-xl text-[13px] font-semibold cursor-pointer transition-all flex items-center justify-center gap-2 border-[1.5px]
+              ${justShared ? 'bg-emerald-50 text-emerald-600 border-emerald-200' : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'}`}
+          >
+            {justShared ? <>✓ Copied</> : <><ShareIcon /> Share</>}
+          </button>
         </div>
       </div>
     </div>

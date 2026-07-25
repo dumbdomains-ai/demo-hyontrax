@@ -107,7 +107,7 @@ const RegisterAttendee = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-[1fr_300px] gap-5 items-start">
+      <div className="grid grid-cols-1 xl:grid-cols-[1fr_280px] gap-5 items-start">
         {/* Form */}
         <div className="bg-white rounded-[20px] p-7 shadow-blue-md border-[1.5px] border-blue-100/50">
           {step === 1 && (

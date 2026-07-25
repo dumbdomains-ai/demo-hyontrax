@@ -71,7 +71,7 @@ const TestimonyAdmin = () => {
   return (
     <div>
       {/* Stats */}
-      <div className="grid grid-cols-4 gap-[14px] mb-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-[14px] mb-6">
         {[
           { label: 'Total Stories',   value: counts.All,                    icon: '📖', color: '#E3F2FD', tc: '#1565C0' },
           { label: 'Pending Approval',value: counts['Pending Approval'],     icon: '⏳', color: '#FEF3C7', tc: '#F59E0B' },
@@ -88,7 +88,7 @@ const TestimonyAdmin = () => {
         ))}
       </div>
 
-      <div className="grid grid-cols-[1fr_380px] gap-6 items-start">
+      <div className="grid grid-cols-1 xl:grid-cols-[1fr_380px] gap-6 items-start">
         {/* List */}
         <div className="bg-white rounded-[20px] shadow-blue-md border-[1.5px] border-blue-100/50 overflow-hidden">
           <div className="px-4 py-[14px] border-b-[1.5px] border-blue-50 flex gap-1 overflow-x-auto">
@@ -106,7 +106,7 @@ const TestimonyAdmin = () => {
             ))}
           </div>
 
-          <div className="max-h-[600px] overflow-y-auto">
+          <div className="overflow-y-auto">
             {filtered.map((t) => {
               const sc = statusColors[t.status];
               return (
